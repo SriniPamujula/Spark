@@ -37,7 +37,7 @@ newDF.printSchema
 
 val database = "azcasestudy"
 //val url: String = s"jdbc:postgresql://azcasestudy.postgres.database.azure.com/$database"
-val url: String = s"jdbc:postgresql://aicasestudy.postgres.database.azure.com:5432/postgres?user=aicasestudy@aicasestudy&password=Azurepw1!&sslmode=require"
+val url: String = s"jdbc:postgresql://aicasestudy.postgres.database.azure.com:5432/postgres?user=aicasestudy@aicasestudy&password=xxxxxx&sslmode=require"
 val tableName: String = "casestudy_spark"
 //val user: String = "casestudy@azcasestudy"
 //val password: String = "Azurepw1!"
