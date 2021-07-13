@@ -3,19 +3,19 @@ FROM public.casestudy_spark
 
 
 --Total cases and deaths in USA
-SELECT 'Total cases and deaths in USA' Note ,sum(total_cases) TotalCases, sum(total_deaths) TotalDeaths
+SELECT 'Total cases and deaths in USA' Note ,sum(new_case) TotalCases, sum(new_death) TotalDeaths
 FROM public.casestudy_spark;
 
 --Top 5 states with high COVID Cases
 select  * from
-(select state, sum(total_cases) TotalCases
+(select state, sum(new_case) TotalCases
 FROM public.casestudy_spark
 group by state) a
 order by TotalCases desc
 limit 5
 
 --Total cases and death in California as of 5/20/2021
-SELECT 'Total cases and deaths in California' Note ,sum(total_cases) TotalCases, sum(total_deaths) TotalDeaths
+SELECT 'Total cases and deaths in California' Note ,sum(new_case) TotalCases, sum(new_death) TotalDeaths
 FROM public.casestudy_spark
 where state = 'CA'
 and TO_DATE(submission_date, 'MM/DD/YYYY') <= '5/20/2021'
