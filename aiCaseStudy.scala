@@ -49,11 +49,5 @@ newDF.write.mode(SaveMode.Overwrite).jdbc(url, tableName, properties)
 
 
 
-// COMMAND ----------
 
-val pgConnectionProperties = new Properties()
-pgConnectionProperties.put("user","casestudy")
-pgConnectionProperties.put("password","casestudy")
-val pgTable = "public.casestudy_table"
-val pgDF = spark.read.jdbc("jdbc:postgresql://casestudy.cpklq9vljodx.us-east-1.rds.amazonaws.com/casestudy",pgTable,pgConnectionProperties)
 
